@@ -1,2 +1,3 @@
 # xlo_clone_mobx
- xlo clone usando mobx
+Estudo do curso, desenvolvimento do xlo clone usando mobx para gerenceia de estado
+Back-end com Parse Server
