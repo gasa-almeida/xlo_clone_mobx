@@ -4,7 +4,7 @@
 .dart_tool/
 .packages
 build/
-lib/chave_parse.dart
+chave_parse
 
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
