@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:parse_server_sdk/parse_server_sdk.dart';
+import 'package:xlo_clone_mobx/chave_parse.dart';
 import 'package:xlo_clone_mobx/screens/base/base_screen.dart';
 import 'package:get_it/get_it.dart';
 import 'package:xlo_clone_mobx/stores/page_store.dart';
 
 void main() async {
 
+  final chaveParse = new ChaveParse();
+
   WidgetsFlutterBinding.ensureInitialized();
-  await initializeParse();
+  await chaveParse.initializeParse();
   setupLocators();
   runApp(MyApp());
 
@@ -62,17 +64,7 @@ void setupLocators() {
   GetIt.I.registerSingleton(PageStore());
 }
 
-Future<void> initializeParse() async {
-  //Inicialização do Parse Server
-  await Parse().initialize(
-    'CUZ8AO0QDlgEJtW1RbuHCAu125GUJLAyhyhc18aZ',
-    'https://parseapi.back4app.com/',
-    clientKey: 'BlT6bQlsTfBpOd38WexvUAGmrJs63JobN1ynoxpw',
-    autoSendSessionId: true,
-    debug: true,
-  );
 
-}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

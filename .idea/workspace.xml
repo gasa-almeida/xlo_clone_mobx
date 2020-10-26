@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc52e13e-53f5-4173-a82e-86472757ba9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/components/drawer/custom_drawer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/components/drawer/custom_drawer_header.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/components/drawer/page_section.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/components/drawer/page_tile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/signup/components.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stores/page_store.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
