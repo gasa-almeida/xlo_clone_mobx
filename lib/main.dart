@@ -34,13 +34,13 @@ void main() async {
 //  response.success ? print(response.result): print('Erro');
 
   //Como ler todos os objetos(registros) de uma classe(tabela)
-  final response = await ParseObject('Categories').getAll();
-  //response.success ? print(response.results): print('erro'); //ou
-  if(response.success) {
-    for(final object in response.results) {
-      print(object);
-    }
-  }
+//  final response = await ParseObject('Categories').getAll();
+//  //response.success ? print(response.results): print('erro'); //ou
+//  if(response.success) {
+//    for(final object in response.results) {
+//      print(object);
+//    }
+//  }
 
 //  //Comofazer uma consulta de uma registro especifico
 //  final query = QueryBuilder(ParseObject('Categories'));

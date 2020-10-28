@@ -96,4 +96,7 @@ abstract class _SignupStore with Store {
       return 'Senhas não coincidem';
   }
 
+  @computed
+  bool get isFormValid => nameValid && phoneValid && emailValid && pass1Valid && pass2Valid;
+
 }

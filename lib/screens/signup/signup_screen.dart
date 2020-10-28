@@ -116,19 +116,24 @@ class SignUpScreen extends StatelessWidget {
                          );
                         }
                       ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(vertical: 12.0),
-                        height: 40.0,
-                        child: RaisedButton(
-                          color: Colors.orange,
-                          child: Text('Entrar'),
-                          textColor: Colors.white,
-                          elevation: 0,
-                          onPressed: (){},
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                        ),
+                      Observer(
+                        builder: (_){
+                          return Container(
+                            margin: const EdgeInsets.symmetric(vertical: 12.0),
+                            height: 40.0,
+                            child: RaisedButton(
+                                  color: Colors.orange,
+                                  disabledColor: Colors.orange.withAlpha(120),
+                                  child: Text('Entrar'),
+                                  textColor: Colors.white,
+                                  elevation: 0,
+                                  onPressed: signupStore.isFormValid ? (){} : null,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                ),
+                            );
+                         },
                       ),
                       Divider(color: Colors.black,),
                       Padding(
