@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xlo_clone_mobx/chave_parse.dart';
+import 'package:parse_server_sdk/parse_server_sdk.dart';
+import 'package:xlo_clone_mobx/.env.dart';
 import 'package:xlo_clone_mobx/screens/base/base_screen.dart';
 import 'package:get_it/get_it.dart';
 import 'package:xlo_clone_mobx/stores/page_store.dart';
@@ -33,13 +34,13 @@ void main() async {
 //  response.success ? print(response.result): print('Erro');
 
   //Como ler todos os objetos(registros) de uma classe(tabela)
-//  final response = await ParseObject('Categories').getAll();
-//  //response.success ? print(response.results): print('erro'); //ou
-//  if(response.success) {
-//    for(final object in response.results) {
-//      print(object);
-//    }
-//  }
+  final response = await ParseObject('Categories').getAll();
+  //response.success ? print(response.results): print('erro'); //ou
+  if(response.success) {
+    for(final object in response.results) {
+      print(object);
+    }
+  }
 
 //  //Comofazer uma consulta de uma registro especifico
 //  final query = QueryBuilder(ParseObject('Categories'));
