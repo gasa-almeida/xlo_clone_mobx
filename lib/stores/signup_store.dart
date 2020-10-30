@@ -6,9 +6,9 @@ class SignupStore = _SignupStore with _$SignupStore;
 
 abstract class _SignupStore with Store {
 
-  //observables são as variáveis observaveis para saber se houve mudança
-  //actions
-  //computeds
+  //observables são as variáveis/objetos observaveis que representam e sofrem alterações
+  //actions são as funções que realizam alterações nos observáveis
+  //computeds reune os dados que derivam dos observáveis para realizar um validação por exemplo
 
   @observable
   String name;
@@ -45,6 +45,7 @@ abstract class _SignupStore with Store {
       return 'E-mail inválido';
   }
 
+
   @observable
   String phone;
 
@@ -61,6 +62,7 @@ abstract class _SignupStore with Store {
     else
       return 'Telefone inválido';
   }
+
 
   @observable
   String pass1;
@@ -79,6 +81,7 @@ abstract class _SignupStore with Store {
       return 'Senha muito curta';
   }
 
+
   @observable
   String pass2;
 
@@ -96,7 +99,25 @@ abstract class _SignupStore with Store {
       return 'Senhas não coincidem';
   }
 
+
   @computed
   bool get isFormValid => nameValid && phoneValid && emailValid && pass1Valid && pass2Valid;
+
+  @computed
+  Function get signUpPressed => (isFormValid && !loading) ? _signUp : null;
+
+
+  @observable
+  bool loading = false;
+
+  @action
+  Future<void> _signUp() async {
+    loading = true;
+    print('Estado do loading: $loading');
+    await Future.delayed(Duration(seconds: 3));
+
+    loading = false;
+    print('Estado do loading: $loading');
+  }
 
 }

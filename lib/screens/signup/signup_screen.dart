@@ -39,6 +39,7 @@ class SignUpScreen extends StatelessWidget {
                       Observer(
                         builder: (_) {
                           return TextField(
+                            enabled: !signupStore.loading,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'Exemplo: João da Silva',
@@ -54,6 +55,7 @@ class SignUpScreen extends StatelessWidget {
                       Observer(
                         builder: (_){
                           return TextField(
+                            enabled: !signupStore.loading,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'Exemplo: joao@email.com',
@@ -71,6 +73,7 @@ class SignUpScreen extends StatelessWidget {
                       Observer(
                         builder: (_){
                           return TextField(
+                            enabled: !signupStore.loading,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'Exemplo: (00) 00000-0000',
@@ -91,6 +94,7 @@ class SignUpScreen extends StatelessWidget {
                       Observer(
                         builder: (_){
                           return TextField(
+                            enabled: !signupStore.loading,
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
                               isDense: true,
@@ -106,6 +110,7 @@ class SignUpScreen extends StatelessWidget {
                       Observer(
                         builder: (_){
                           return TextField(
+                            enabled: !signupStore.loading,
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
                               isDense: true,
@@ -124,10 +129,12 @@ class SignUpScreen extends StatelessWidget {
                             child: RaisedButton(
                                   color: Colors.orange,
                                   disabledColor: Colors.orange.withAlpha(120),
-                                  child: Text('Entrar'),
+                                  child: signupStore.loading
+                                    ? CircularProgressIndicator()
+                                    : Text('Cadastrar'),
                                   textColor: Colors.white,
                                   elevation: 0,
-                                  onPressed: signupStore.isFormValid ? (){} : null,
+                                  onPressed: signupStore.signUpPressed,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
